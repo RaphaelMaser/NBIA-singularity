@@ -1,0 +1,25 @@
+Bootstrap: docker
+From: debian:bullseye
+
+%files
+#nbia-data-retriever-4.2.deb /root/NBIA-Data-Retriever/nbia-data-retriever-4.2.deb
+utils/run.sh /nbia/run.sh
+
+%environment
+export SHELL=/bin/bash
+
+%post
+mkdir -p /usr/share/desktop-directories/
+mkdir -p /nbia/data
+mkdir -p /nbia/manifest
+
+apt-get update
+apt-get install -y wget xdg-utils 
+
+wget -P ~/NBIA-Data-Retriever https://cbiit-download.nci.nih.gov/nbia/releases/ForTCIA/NBIADataRetriever_4.2/nbia-data-retriever-4.2.deb
+dpkg -i ~/NBIA-Data-Retriever/nbia-data-retriever-4.2.deb
+
+
+%runscript
+chmod a+x /nbia/run.sh
+/nbia/run.sh
