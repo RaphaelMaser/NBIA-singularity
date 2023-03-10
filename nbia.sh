@@ -2,7 +2,7 @@
 #SBATCH -J XNAT
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
-#SBATCH -c 7                # Cores assigned to each tasks
+#SBATCH -c 2                # Cores assigned to each tasks
 #SBATCH --time=0-24:00:00
 #SBATCH -p batch
 
