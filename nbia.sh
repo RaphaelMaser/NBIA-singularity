@@ -12,7 +12,7 @@ input_folder=manifest
 mkdir -p $output_folder
 mkdir -p $input_folder
 
-module load Utilities/Singularity
+module load tools/Singularity
 
 if ! test -f "nbia.sif"; then
     echo "Singularity container needs to be build"
