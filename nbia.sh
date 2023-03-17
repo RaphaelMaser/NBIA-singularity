@@ -14,14 +14,8 @@ mkdir -p $input_folder
 
 module load tools/Singularity
 
-if ! test -f "nbia.sif"; then
-    echo "Singularity container needs to be build"
-    singularity build --fakeroot nbia.sif nbia.def
-    echo "Singularity container was built"
-fi
-
-singularity run --fakeroot --no-home --writable \
+singularity run --userns --no-home --writable \
 -B $output_folder:/nbia/data \
 -B $input_folder:/nbia/manifest \
-nbia.sif \
+library://raphaelm/nbia-singularity/nbia.sif:latest \
 nbia

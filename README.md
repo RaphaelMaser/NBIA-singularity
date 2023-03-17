@@ -6,4 +6,4 @@ The nbia.sh file can be used to start the download of a dataset. It furthermore 
 
 Before you can start downloading the dataset you need to download the manifest file and put it in the "manifest"-folder. If you want to change the output folder (standard is "data") you need to adjust the variable "output_folder" in the script.
 
-After execution the script will automatically create the singularity image on the first start, subsequently create a container from the image and start the nbia data retriever.
+After execution the script will automatically download the singularity image on the first start, subsequently create a container from the image and start the nbia data retriever.
