@@ -14,6 +14,6 @@ module load tools/Singularity
 
 singularity run --userns --no-home --writable \
 -B $output_folder:/nbia/data \
--B $input_folder:/nbia/manifest \
+-B manifest:/nbia/manifest \
 library://raphaelm/nbia-singularity/nbia.sif:latest \
 nbia
