@@ -7,10 +7,8 @@
 #SBATCH -p batch
 
 output_folder=data
-input_folder=manifest
 
 mkdir -p $output_folder
-mkdir -p $input_folder
 
 module load tools/Singularity
 
