@@ -1,8 +1,8 @@
-#!/bin/sh
-#SBATCH -J XNAT
+#!/bin/bash
+#SBATCH -J "NBIA data retriever"
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
-#SBATCH -c 2                # Cores assigned to each tasks
+#SBATCH -c 2                   # Cores assigned to each tasks
 #SBATCH --time=0-24:00:00
 #SBATCH -p batch
 
