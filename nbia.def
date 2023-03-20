@@ -12,6 +12,7 @@ export SHELL=/bin/bash
 mkdir -p /usr/share/desktop-directories/
 mkdir -p /nbia/data
 mkdir -p /nbia/manifest
+mkdir -p /nbia/credentials
 
 apt-get update
 apt-get install -y wget xdg-utils 
