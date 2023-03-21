@@ -10,7 +10,7 @@ output_folder=data
 
 mkdir -p $output_folder
 
-module load tools/Singularity
+module load tools/Singularity/3.8.1
 
 singularity run --userns --no-home --writable \
 -B $output_folder:/nbia/data \
