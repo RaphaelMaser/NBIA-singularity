@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J "NBIA data retriever"
+#SBATCH -J NBIA
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH -c 2                   # Cores assigned to each tasks
