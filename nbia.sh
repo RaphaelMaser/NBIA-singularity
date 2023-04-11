@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 #SBATCH -J NBIA
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
